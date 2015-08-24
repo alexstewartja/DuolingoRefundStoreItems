@@ -5,7 +5,7 @@
 // @author       alexstewartja
 // @match        https://www.duolingo.com/*
 // @copyright    2015, Alex Stewart
-// @version     1.0
+// @version      1.0
 // @updateURL       ?duo
 // @downloadURL     ?duo
 // ==/UserScript==
