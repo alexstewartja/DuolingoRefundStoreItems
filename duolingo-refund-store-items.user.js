@@ -36,7 +36,7 @@ var refundableStoreItems =
             "title": "Timed Practice",
             "description": "See how well you do practicing your skills against the clock in Timed Practice.",
             "price": "10"
-        },
+        }
         //{"id": "refill-purchase", "name": "heart_refill", "title": "Heart Refill", "description": "Allows you to regain one heart lost during a lesson.", "price": "4"},
         //{"id": "formal-purchase", "name": "formal_outfit", "title": "Formal Attire", "description": "Learn in style. Duo has always been a sharp guy, now he'll look sharp too.", "price": "20"},
         //{"id": "luxury-purchase", "name": "luxury_outfit", "title": "Champagne Tracksuit", "description": "Learn in luxury. Duo will love the feel of 24 carat gold silk on his feathers.", "price": "30"},
