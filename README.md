@@ -30,7 +30,7 @@ Follow the uninstall steps for the browser/extension you're using:
 - Normal view of Lingot store:
 ![store_normal](screenshots/lingot_store_normal.png)
 <br/><br/>
-- View of Lingot store after store item purchases:
+- View of Lingot store after item purchases:
 ![store_refunds_available](screenshots/lingot_store_refunds_available.png)
 <br/><br/>
 - Requesting a refund:
