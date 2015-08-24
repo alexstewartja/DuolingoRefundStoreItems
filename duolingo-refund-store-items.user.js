@@ -1,23 +1,46 @@
 // ==UserScript==
 // @name         Duolingo: Refund Store Items
-// @namespace    http://blog.alexstew.com/original/scripts/userscripts
+// @namespace    http://blog.alexstew.com/original/scripts/userscripts/duolingo-refund-store-items
 // @description  Userscript for Duolingo that allows users to cancel store item purchases and regain spent lingots.
 // @author       alexstewartja
 // @match        https://www.duolingo.com/*
 // @copyright    2015, Alex Stewart
 // @version      1.0
-// @updateURL       ?duo
-// @downloadURL     ?duo
+// @updateURL       https://github.com/alexstewartja/DuolingoRefundStoreItems/raw/master/duolingo-refund-store-items.meta.js?duo
+// @downloadURL     https://github.com/alexstewartja/DuolingoRefundStoreItems/raw/master/duolingo-refund-store-items.user.js?duo
 // ==/UserScript==
 
-console.debug('Duolingo: Refund Store Items http://blog.alexstew.com/original/scripts/userscripts');
+console.debug('Duolingo: Refund Store Items http://blog.alexstew.com/original/scripts/userscripts/duolingo-refund-store-items');
 
 var main = initRefundStoreItems;
 var tic_toc; // Timer
 var refundableStoreItems =
-    [{"id": "streak-purchase", "itemName": "streak_freeze", "displayName": "Streak Freeze", "price": "10"},
-        {"id": "wager-purchase", "itemName": "rupee_wager", "displayName": "Double or Nothing", "price": "5"},
-        {"id": "practice-purchase", "itemName": "timed_practice", "displayName": "Timed Practice", "price": "10"}];
+    [
+        {
+            "id": "streak-purchase",
+            "name": "streak_freeze",
+            "title": "Streak Freeze",
+            "description": "Streak Freeze allows your streak to remain in place for one full day of inactivity.",
+            "price": "10"
+        },
+        {
+            "id": "wager-purchase",
+            "name": "rupee_wager",
+            "title": "Double or Nothing",
+            "description": "Attempt to double your five lingot wager by maintaining a seven day streak.",
+            "price": "5"
+        },
+        {
+            "id": "practice-purchase",
+            "name": "timed_practice",
+            "title": "Timed Practice",
+            "description": "See how well you do practicing your skills against the clock in Timed Practice.",
+            "price": "10"
+        },
+        //{"id": "refill-purchase", "name": "heart_refill", "title": "Heart Refill", "description": "Allows you to regain one heart lost during a lesson.", "price": "4"},
+        //{"id": "formal-purchase", "name": "formal_outfit", "title": "Formal Attire", "description": "Learn in style. Duo has always been a sharp guy, now he'll look sharp too.", "price": "20"},
+        //{"id": "luxury-purchase", "name": "luxury_outfit", "title": "Champagne Tracksuit", "description": "Learn in luxury. Duo will love the feel of 24 carat gold silk on his feathers.", "price": "30"},
+    ];
 
 // Initialize when the Duolingo application loads
 function onHomeAdded(mutations) {
@@ -91,7 +114,7 @@ function injectStoreText() {
 
 // Generate refund button for given store item.
 function generateRefundBtn(storeItem) {
-    return '<a onclick="requestRefund(\'' + storeItem.itemName + '\',\'' + storeItem.displayName + '\',\'' + storeItem.price + '\');"' +
+    return '<a onclick="requestRefund(\'' + storeItem.name + '\',\'' + storeItem.title + '\',\'' + storeItem.price + '\');"' +
         ' class="item-purchase item-refund-' + storeItem.id + ' btn btn-green right">' + '<span class="margin-right">Refund:</span><span' +
         ' class="icon icon-lingot-small">' + '</span><span class="price"> +' + storeItem.price + '</span></a>'
 }
@@ -102,7 +125,7 @@ function determineRefunds() {
         var item = $("#" + storeItem.id);
         if (item.hasClass("purchased")) {
             var refundBtn = generateRefundBtn(storeItem);
-            if (duo.user.toJSON().inventory.hasOwnProperty(storeItem.itemName) && $('.item-refund-' + storeItem.id).length == 0) {
+            if (duo.user.toJSON().inventory.hasOwnProperty(storeItem.name) && $('.item-refund-' + storeItem.id).length == 0) {
                 item.parent().prepend(refundBtn);
             }
         }
