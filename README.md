@@ -30,7 +30,7 @@ Follow the uninstall steps for the browser/extension you're using:
 - Normal view of Lingot store:
 ![store_normal](screenshots/lingot_store_normal.png)
 <br/><br/>
-- View of Lingot store after store item purchases:
+- View of Lingot store after item purchases:
 ![store_refunds_available](screenshots/lingot_store_refunds_available.png)
 <br/><br/>
 - Requesting a refund:
@@ -41,7 +41,8 @@ Follow the uninstall steps for the browser/extension you're using:
 
 ### Future Plans
 - Add a <b>Refund All</b> button to the store to avoid requesting refunds one at a time.
+- Include other refundable items that have been excluded from the Duolingo UI (examples enclude <b>Heart Refill</b>, <b>Formal Attire</b> and <b>Champagne Tracksuit</b>.
 
 ### Questions/Comments?
-- Join the disussion [here](http://blog.alexstew.com/original/scripts/userscripts/)
+- Join the disussion [here](http://blog.alexstew.com/original/scripts/userscripts/duolingo-refund-store-items)
 
