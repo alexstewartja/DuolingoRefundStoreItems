@@ -4,6 +4,7 @@
 // @description  Userscript for Duolingo that allows users to cancel store item purchases and regain spent lingots.
 // @author       alexstewartja
 // @match        https://www.duolingo.com/*
+// @grant        none
 // @copyright    2015, Alex Stewart
 // @version      1.0
 // @updateURL       https://github.com/alexstewartja/DuolingoRefundStoreItems/raw/master/duolingo-refund-store-items.meta.js?duo
