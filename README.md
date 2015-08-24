@@ -16,7 +16,7 @@ Userscript for [Duolingo](https://www.duolingo.com) that allows users to cancel 
 ### Usage
 
 - To use the script, navigate to Duolingo's [Lingot store](https://www.duolingo.com/show_store)
-- The only store items that are refundable are <b>Streak Freeze</b>, <b>Double or Nothing</b> and <b>Timed Practice</b>.
+- At present, the only store items that are refundable are <b>Streak Freeze</b>, <b>Double or Nothing</b> and <b>Timed Practice</b>.
 - Once you purchase one of the above items, a <b>Refund</b> button will appear next to it, allowing you the convenience of regaining the lingots spent on that purchase.
 
 ### How To Uninstall
