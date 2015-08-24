@@ -41,6 +41,7 @@ Follow the uninstall steps for the browser/extension you're using:
 
 ### Future Plans
 - Add a <b>Refund All</b> button to the store to avoid requesting refunds one at a time.
+- Include other refundable items that have been excluded from the Duolingo UI (examples enclude <b>Heart Refill</b>, <b>Formal Attire</b> and <b>Champagne Tracksuit</b>.
 
 ### Questions/Comments?
 - Join the disussion [here](http://blog.alexstew.com/original/scripts/userscripts/)
