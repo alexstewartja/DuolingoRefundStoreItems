@@ -44,5 +44,5 @@ Follow the uninstall steps for the browser/extension you're using:
 - Include other refundable items that have been excluded from the Duolingo UI (examples enclude <b>Heart Refill</b>, <b>Formal Attire</b> and <b>Champagne Tracksuit</b>.
 
 ### Questions/Comments?
-- Join the disussion [here](http://blog.alexstew.com/original/scripts/userscripts/)
+- Join the disussion [here](http://blog.alexstew.com/original/scripts/userscripts/duolingo-refund-store-items)
 
